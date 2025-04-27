@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboTech - Advanced Robotics Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="./asserts/logo.png" alt="RoboTech Logo">
+        </div>
+        <nav role="navigation">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Hero Section with Carousel -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>The Future of Robotics is Here</h1>
+                <p>Experience next-generation automation with RoboTech's innovative solutions.</p>
+                <a href="#products" class="cta-button">Explore Our Robots</a>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="slide active">
+                        <img src="assets/1.jpg" alt="Waiter Robot">
+                        <div class="caption">Advanced Robots for Service</div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/2.jpg" alt="Chef Robot">
+                        <div class="caption">AI-Powered Robots for Chef</div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/3.jpg" alt="Companion Robot">
+                        <div class="caption">Smart Home Robots for Daily Companion</div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/4.jpg" alt="Caregiver Robot">
+                        <div class="caption">Precision Medical Robots for Healthcare</div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/5.jpg" alt="Inspector Robot">
+                        <div class="caption"> Robots for Anomaly Detection and Safety Assurance</div>
+                    </div>
+                    <button class="carousel-button prev">&#10094;</button>
+                    <button class="carousel-button next">&#10095;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <h2>Our Robot Solutions</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="asserts\1.jpg" alt="Waiter Robot">
+                    <h3>Waiter Robot</h3>
+                    <p>Where efficiency meets hospitality – I’m your automated dining companion, here to serve with precision, speed, and a touch of innovation.</p>
+                    <a href="#" class="product-link">Learn More</a>
+                </article>
+                <article class="product-card">
+                    <img src="asserts\2.jpg" alt="Chef Robot">
+                    <h3>Chef Robot</h3>
+                    <p>From chopping to crafting culinary masterpieces – I blend technology with the art of cooking, delivering consistent flavor and creativity on every plate.</p>
+                    <a href="#" class="product-link">Learn More</a>
+                </article>
+                <article class="product-card">
+                    <img src="asserts\3.jpg" alt="Companion Robot">
+                    <h3>Companion Robot</h3>
+                    <p>More than just a machine – I’m here to listen, engage, and brighten your day with conversation, laughter, and unwavering companionship.</p>
+                    <a href="#" class="product-link">Learn More</a>
+                </article>
+                <article class="product-card">
+                    <img src="asserts\4.jpg" alt="Caregiver Robot">
+                    <h3>Caregiver Robot</h3>
+                    <p>Your safety and well-being are my priority. I provide reliable assistance, monitor health, and offer a reassuring presence for those in need.</p>
+                    <a href="#" class="product-link">Learn More</a>
+                </article>
+                <article class="product-card">
+                    <img src="asserts\5.jpg" alt="Inspector Robot">
+                    <h3>Inspector Robot</h3>
+                    <p>Detail-oriented and tireless – I’m designed to ensure safety, and maintain standards in every inspection.</p>
+                    <a href="#" class="product-link">Learn More</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2>Key Features</h2>
+            <div class="features-container">
+                <div class="feature">
+                    <img src="https://via.placeholder.com/100x100" alt="AI Icon">
+                    <h3>Advanced AI</h3>
+                    <p>Our robots use state-of-the-art artificial intelligence to adapt to new tasks.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://via.placeholder.com/100x100" alt="Battery Icon">
+                    <h3>Long Battery Life</h3>
+                    <p>Extended operation time with quick-charging capabilities.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://via.placeholder.com/100x100" alt="Durability Icon">
+                    <h3>Durability</h3>
+                    <p>Built with premium materials to withstand harsh environments.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://via.placeholder.com/100x100" alt="Support Icon">
+                    <h3>24/7 Support</h3>
+                    <p>Our team is always available to help with any issues or questions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Demo Section -->
+        <section id="demo" class="demo">
+            <h2>See Our Robots in Action</h2>
+            <div class="video-container">
+                <video controls poster="https://via.placeholder.com/800x450">
+                    <source src="robot-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about">
+            <h2>About RoboTech</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x300" alt="RoboTech Team">
+                </div>
+                <div class="about-text">
+                    <p>RoboTech is a leading innovator in robotics technology. Founded in 2010, we've been pushing the boundaries of what robots can do for over a decade.</p>
+                    <p>Our team of engineers, designers, and AI specialists work together to create robots that are not only functional but also intuitive and easy to use.</p>
+                    <p>We believe in a future where robots and humans work together to create a better world.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Address:</strong> 123 Tech Street, Innovation City</p>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Email:</strong> info@robotech.com</p>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="messageForm" role="form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="robotType">I'm interested in:</label>
+                            <select id="robotType" name="robotType">
+                                <option value="">Select Robot Type</option>
+                                <option value="industrial">Industrial Robots</option>
+                                <option value="service">Service Robots</option>
+                                <option value="domestic">Domestic Robots</option>
+                                <option value="ai">AI-Powered Robots</option>
+                            </select>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to newsletter</label>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://via.placeholder.com/100x30" alt="RoboTech Logo">
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RoboTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+</body>
+</html>

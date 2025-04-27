@@ -105,31 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Active nav link based on scroll position
-    // const sections = document.querySelectorAll('section');
-    // const navLinks2 = document.querySelectorAll('.nav-links a');
 
-    // window.addEventListener('scroll', function () {
-    //     let current = '';
-
-    //     sections.forEach(section => {
-    //         const sectionTop = section.offsetTop;
-    //         const sectionHeight = section.clientHeight;
-
-    //         if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-    //             current = section.getAttribute('id');
-    //         }
-    //     });
-
-    //     navLinks2.forEach(link => {
-    //         link.classList.remove('active');
-    //         if (link.getAttribute('href').substring(1) === current) {
-    //             link.classList.add('active');
-    //         }
-    //     });
-    // });
-
-    // Contact Form validation
     const contactForm = document.getElementById('messageForm');
 
     if (contactForm) {
@@ -143,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const message = document.getElementById('message').value.trim();
 
             // Validate email format
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailRegex.test(email)) {
                 alert('Please enter a valid email address.');
                 return;
@@ -160,28 +136,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Product animation on scroll
-    // const productCards = document.querySelectorAll('.product-card');
-
-    // const observerOptions = {
-    //     threshold: 0.1,
-    //     rootMargin: '0px 0px -50px 0px'
-    // };
-
-    // const productObserver = new IntersectionObserver(function (entries, observer) {
-    //     entries.forEach(entry => {
-    //         if (entry.isIntersecting) {
-    //             entry.target.style.opacity = '1';
-    //             entry.target.style.transform = 'translateY(0)';
-    //             observer.unobserve(entry.target);
-    //         }
-    //     });
-    // }, observerOptions);
-
-    // productCards.forEach(card => {
-    //     card.style.opacity = '0';
-    //     card.style.transform = 'translateY(30px)';
-    //     card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    //     productObserver.observe(card);
-    // });
+    
 });

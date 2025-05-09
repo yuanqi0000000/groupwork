@@ -1,6 +1,7 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Mobile Navigation
+    /*
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navLinks.classList.remove('active');
         });
     });
+    */
 
     // Carousel functionality
     const carousel = document.querySelector('.carousel');
@@ -84,28 +86,50 @@ document.addEventListener('DOMContentLoaded', function () {
         initCarousel();
     }
 
-    // Back to top button
+    // Back to Top Button
     const backToTopButton = document.querySelector('.back-to-top');
 
-    if (backToTopButton) {
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Accordion Functionality
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        const content = item.querySelector('.accordion-content');
+        const icon = header.querySelector('.accordion-icon');
+
+        header.addEventListener('click', () => {
+
+            // Toggle current item
+            item.classList.toggle('active'); // Optional: for styling the item itself
+            header.classList.toggle('active');
+            content.classList.toggle('active'); // For padding transition
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.textContent = '+';
+                icon.style.transform = 'rotate(0deg)';
             } else {
-                backToTopButton.classList.remove('visible');
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.textContent = '+'; // Icon is handled by CSS transform now
+                icon.style.transform = 'rotate(45deg)';
             }
         });
+    });
 
-        backToTopButton.addEventListener('click', function (e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-
-
+}); // End of DOMContentLoaded
     const contactForm = document.getElementById('messageForm');
 
     if (contactForm) {
@@ -137,4 +161,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     
-});

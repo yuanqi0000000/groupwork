@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Back to Top Button
     const backToTopButton = document.querySelector('.back-to-top');
 
-
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 300) {
             backToTopButton.classList.add('visible');
@@ -94,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    
+    // Handle demo request
     function handleRequestDemo(modalId) {
         const modal = bootstrap.Modal.getInstance(document.getElementById(modalId));
         if (modal) {
@@ -119,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-
 }); 
 
     

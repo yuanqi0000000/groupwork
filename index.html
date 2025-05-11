@@ -6,6 +6,8 @@
     <title>LightYear - Advanced Robotics Solutions</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Vue.js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -14,744 +16,717 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Header with navigation -->
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/logo.png" alt="LightYear Logo" id="logo">
-                    <span class="vertical-line"></span>
-                    <img src="./assets/chinalogo.png" alt="china logo" id="chinalogo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#products">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#features">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#faq-accordion">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact us😊</a>
-                        </li>
+    <div id="mainApp">
+        <!-- Header with navigation -->
+        <header class="sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/logo.png" alt="LightYear Logo" id="logo">
+                        <span class="vertical-line"></span>
+                        <img src="./assets/chinalogo.png" alt="china logo" id="chinalogo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#products">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#features">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#faq-accordion">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact Us😊</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- New Video Intro Section -->
+            <section id="video-intro" class="video-intro-section">
+                <video autoplay muted loop playsinline id="introVideo" src="assets/Future.mp4"></video>
+                <div class="video-overlay-content">
+                    <h1 class="display-4 fw-bold">Welcome to Light Year</h1>
+                    <p class="lead mb-4 fw-bold">Discover the future of automation with us.</p>
+                    <a href="#home" class="btn btn-outline-light btn-lg cta-button-video fw-bold">Let's start</a>
+                </div>
+            </section>
+
+            <!-- Hero Section with Carousel -->
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h1>The Future of Robotics is Here</h1>
+                    <p>Experience next-generation automation with LightYear's innovative solutions.</p>
+                    <!-- call to action button -->
+                    <a href="#products" class="cta-button">Explore Our Robots</a>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="slide active">
+                            <img src="assets/1.jpg" alt="Waiter Robot">
+                            <div class="caption">Advanced Robots for Service</div>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/2.jpg" alt="Chef Robot">
+                            <div class="caption">AI-Powered Robots for Chef</div>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/3.jpg" alt="Companion Robot">
+                            <div class="caption">Smart Home Robots for Daily Companion</div>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/4.jpg" alt="Caregiver Robot">
+                            <div class="caption">Precision Medical Robots for Healthcare</div>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/5.jpg" alt="Inspector Robot">
+                            <div class="caption"> Robots for Anomaly Detection and Safety Assurance</div>
+                        </div>
+                        <button class="carousel-button prev">&#10094;</button>
+                        <button class="carousel-button next">&#10095;</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                            <span class="dot" data-index="3"></span>
+                            <span class="dot" data-index="4"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section id="products" class="products">
+                <div class="container">
+                    <h2>Our Robot Solutions</h2>
+                    
+                    <!-- filter buttons -->
+                    <div class="filter-buttons mb-4">
+                        <button class="btn btn-outline-primary me-2" :class="{ 'active': activeFilter === 'all' }" @click="setFilter('all')">All Robots</button>
+                        <button class="btn btn-outline-primary me-2" :class="{ 'active': activeFilter === 'service' }" @click="setFilter('service')">Service</button>
+                        <button class="btn btn-outline-primary me-2" :class="{ 'active': activeFilter === 'home' }" @click="setFilter('home')">Home</button>
+                        <button class="btn btn-outline-primary me-2" :class="{ 'active': activeFilter === 'industrial' }" @click="setFilter('industrial')">Industrial</button>
+                    </div>
+                    
+                    <div v-if="filteredProducts.length === 0" class="alert alert-info">
+                        No robots match your filter criteria.
+                    </div>
+                    <div v-else-if="activeFilter === 'all'" class="alert alert-success">
+                        Showing all {{ filteredProducts.length }} robots
+                    </div>
+                    <div v-else class="alert alert-info">
+                        Showing {{ filteredProducts.length }} {{ activeFilter }} robots
+                    </div>
+                    
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6 col-lg-4" v-for="product in filteredProducts" :key="product.id">
+                            <article class="product-card h-100">
+                                <img :src="product.image" :alt="product.name" class="card-img-top">
+                                <div class="card-body">
+                                    <h3>{{ product.name }}</h3>
+                                    <p>{{ product.description }}</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="product-link" :data-bs-toggle="'modal'" :data-bs-target="'#' + product.modalId">Learn More</a>
+                                        <button class="btn btn-sm btn-success" @click="addToCart(product)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- shopping cart floating button -->
+            <div class="cart-button" @click="toggleCart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge" v-show="cartItems.length > 0">{{ cartItems.length }}</span>
+            </div>
+
+            <!-- Shopping cart sidebar -->
+            <div class="cart-sidebar" :class="{ 'open': showCart }">
+                <div class="cart-header">
+                    <h3>Your Cart</h3>
+                    <button class="close-btn" @click="toggleCart">&times;</button>
+                </div>
+                <div class="cart-body">
+                    <div class="cart-empty" v-show="cartItems.length === 0">
+                        <p>Your cart is empty</p>
+                        <button class="btn btn-primary" @click="toggleCart">Continue Shopping</button>
+                    </div>
+                    
+                    <div class="cart-items" v-show="cartItems.length > 0">
+                        <div class="cart-item" v-for="(item, index) in cartItems" :key="index">
+                            <img :src="item.image" :alt="item.name">
+                            <div class="cart-item-details">
+                                <h4>{{ item.name }}</h4>
+                                <p>${{ item.price }}</p>
+                            </div>
+                            <button class="remove-btn" @click="removeFromCart(index)">&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-footer" v-show="cartItems.length > 0">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span>${{ cartTotal }}</span>
+                    </div>
+                    <button class="btn btn-success btn-lg w-100" @click="checkout">Checkout</button>
+                </div>
+            </div>
+
+            <!-- shopping cart background overlay -->
+            <div class="cart-overlay" v-show="showCart" @click="toggleCart"></div>
+
+            <!-- Product Modals -->
+            <!-- Waiter Robot Modal -->
+            <div class="modal fade" id="waiterModal" tabindex="-1" aria-labelledby="waiterModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="waiterModalLabel">Waiter Robot</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="assets\1.jpg" alt="Waiter Robot" class="img-fluid rounded">
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Advanced Service Robot</h4>
+                                    <p class="lead">Revolutionizing the hospitality industry with precision and efficiency.</p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> Autonomous Navigation</li>
+                                        <li><i class="fas fa-check"></i> Multi-tray Carrying System</li>
+                                        <li><i class="fas fa-check"></i> Voice Recognition</li>
+                                        <li><i class="fas fa-check"></i> Collision Avoidance</li>
+                                        <li><i class="fas fa-check"></i> 8-hour Battery Life</li>
+                                    </ul>
+                                    <div class="specifications">
+                                        <h5>Technical Specifications</h5>
+                                        <table class="table">
+                                            <tr>
+                                                <td>Height</td>
+                                                <td>160cm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Weight</td>
+                                                <td>45kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Load Capacity</td>
+                                                <td>15kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Operating Time</td>
+                                                <td>8-10 hours</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Request Demo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chef Robot Modal -->
+            <div class="modal fade" id="chefModal" tabindex="-1" aria-labelledby="chefModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="chefModalLabel">Chef Robot</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="assets\2.jpg" alt="Chef Robot" class="img-fluid rounded">
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>AI-Powered Culinary Expert</h4>
+                                    <p class="lead">Combining precision engineering with culinary artistry.</p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> Advanced Food Processing</li>
+                                        <li><i class="fas fa-check"></i> Temperature Control</li>
+                                        <li><i class="fas fa-check"></i> Recipe Database</li>
+                                        <li><i class="fas fa-check"></i> Multi-tool System</li>
+                                        <li><i class="fas fa-check"></i> Self-cleaning Function</li>
+                                    </ul>
+                                    <div class="specifications">
+                                        <h5>Technical Specifications</h5>
+                                        <table class="table">
+                                            <tr>
+                                                <td>Height</td>
+                                                <td>180cm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Weight</td>
+                                                <td>75kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Working Area</td>
+                                                <td>2.5m²</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Power Consumption</td>
+                                                <td>2.5kW</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Request Demo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Companion Robot Modal -->
+            <div class="modal fade" id="companionModal" tabindex="-1" aria-labelledby="companionModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="companionModalLabel">Companion Robot</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="assets\3.jpg" alt="Companion Robot" class="img-fluid rounded">
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Smart Home Companion</h4>
+                                    <p class="lead">Your friendly AI companion for daily life.</p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> Natural Language Processing</li>
+                                        <li><i class="fas fa-check"></i> Emotion Recognition</li>
+                                        <li><i class="fas fa-check"></i> Smart Home Integration</li>
+                                        <li><i class="fas fa-check"></i> Entertainment Features</li>
+                                        <li><i class="fas fa-check"></i> Daily Schedule Management</li>
+                                    </ul>
+                                    <div class="specifications">
+                                        <h5>Technical Specifications</h5>
+                                        <table class="table">
+                                            <tr>
+                                                <td>Height</td>
+                                                <td>120cm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Weight</td>
+                                                <td>25kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Battery Life</td>
+                                                <td>12 hours</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Voice Recognition</td>
+                                                <td>98% accuracy</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Request Demo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caregiver Robot Modal -->
+            <div class="modal fade" id="caregiverModal" tabindex="-1" aria-labelledby="caregiverModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="caregiverModalLabel">Caregiver Robot</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="assets\4.jpg" alt="Caregiver Robot" class="img-fluid rounded">
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Healthcare Assistant</h4>
+                                    <p class="lead">Professional care and monitoring for healthcare facilities.</p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> Vital Signs Monitoring</li>
+                                        <li><i class="fas fa-check"></i> Medication Reminders</li>
+                                        <li><i class="fas fa-check"></i> Emergency Response</li>
+                                        <li><i class="fas fa-check"></i> Patient Mobility Support</li>
+                                        <li><i class="fas fa-check"></i> 24/7 Monitoring</li>
+                                    </ul>
+                                    <div class="specifications">
+                                        <h5>Technical Specifications</h5>
+                                        <table class="table">
+                                            <tr>
+                                                <td>Height</td>
+                                                <td>170cm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Weight</td>
+                                                <td>65kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Load Capacity</td>
+                                                <td>100kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Operating Time</td>
+                                                <td>24 hours</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Request Demo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inspector Robot Modal -->
+            <div class="modal fade" id="inspectorModal" tabindex="-1" aria-labelledby="inspectorModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="inspectorModalLabel">Inspector Robot</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="assets\5.jpg" alt="Inspector Robot" class="img-fluid rounded">
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Industrial Inspection Expert</h4>
+                                    <p class="lead">Advanced inspection and quality control for industrial applications.</p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> High-Resolution Imaging</li>
+                                        <li><i class="fas fa-check"></i> Thermal Scanning</li>
+                                        <li><i class="fas fa-check"></i> Defect Detection AI</li>
+                                        <li><i class="fas fa-check"></i> Autonomous Navigation</li>
+                                        <li><i class="fas fa-check"></i> Real-time Reporting</li>
+                                    </ul>
+                                    <div class="specifications">
+                                        <h5>Technical Specifications</h5>
+                                        <table class="table">
+                                            <tr>
+                                                <td>Height</td>
+                                                <td>150cm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Weight</td>
+                                                <td>40kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Camera Resolution</td>
+                                                <td>4K Ultra HD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Operating Range</td>
+                                                <td>500m radius</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Request Demo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <section id="features" class="features">
+                <h2>Key Features</h2>
+                <div class="features-container">
+                    <div class="feature">
+                        <img src="./assets/AI.png" alt="AI Icon">
+                        <h3>Advanced AI</h3>
+                        <p>Our robots use state-of-the-art artificial intelligence to adapt to new tasks.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="./assets/battery.png" alt="Battery Icon">
+                        <h3>Long Battery Life</h3>
+                        <p>Extended operation time with quick-charging capabilities.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="./assets/durability.png" alt="Durability Icon">
+                        <h3>Durability</h3>
+                        <p>Built with premium materials to withstand harsh environments.</p>
+                    </div>
+                    <div class="feature">
+                        <img src="./assets/support.png" alt="Support Icon">
+                        <h3>24/7 Support</h3>
+                        <p>Our team is always available to help with any issues or questions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Demo Section -->
+            <section id="demo" class="demo">
+                <h2>See Our Robots in Action</h2>
+                <div class="video-container">
+                    <video controls poster="./assets/robot.mp4" autoplay muted loop>
+                        <source src="./assets/robot.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <!-- About Us Section -->
+            <section id="about" class="about">
+                <h2>About LightYear</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="./assets/team.png" alt="LightYear Team">
+                    </div>
+                    <div class="about-text">
+                        <p>LightYear is a leading innovator in robotics technology. Founded in 2010, we've been pushing the boundaries of what robots can do for over a decade.</p>
+                        <p>Our team of engineers, designers, and AI specialists work together to create robots that are not only functional but also intuitive and easy to use.</p>
+                        <p>We believe in a future where robots and humans work together to create a better world.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Accordion FAQ Section -->
+            <section id="faq-accordion" class="faq-section">
+                <div class="container">
+                    <h2 class="mb-4">Frequently Asked Questions</h2>
+                    <div class="accordion custom-faq-accordion" id="faqAccordion">
+                        <div class="accordion-item" v-for="(faq, index) in faqList" :key="index">
+                            <h2 class="accordion-header" :id="'faq' + index + '-heading'">
+                                <button class="accordion-button" :class="{ collapsed: index !== 0 }" type="button" data-bs-toggle="collapse" :data-bs-target="'#faq' + index" aria-expanded="index === 0" :aria-controls="'faq' + index">
+                                    {{ faq.question }}
+                                </button>
+                            </h2>
+                            <div :id="'faq' + index" class="accordion-collapse collapse" :class="{ show: index === 0 }" :aria-labelledby="'faq' + index + '-heading'" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    {{ faq.answer }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Contact Section -->
+            <section id="contact" class="contact">
+                <div class="container">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-container">
+                        <div class="contact-form">
+                            <h3>Send Us a Message</h3>
+                            <form @submit.prevent="submitForm" novalidate :class="{ 'was-validated': formSubmitted }">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        v-model="formData.name"
+                                        @input="validateField('name')"
+                                        @blur="validateField('name')"
+                                        :class="{ 'is-invalid': errors.name }"
+                                        required
+                                    >
+                                    <div v-if="errors.name" class="error-message">{{ errors.name }}</div>
+                                    <div v-else-if="formData.name && !errors.name" class="valid-feedback">Name looks good!</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        v-model="formData.email"
+                                        @input="validateField('email')"
+                                        @blur="validateField('email')"
+                                        :class="{ 'is-invalid': errors.email }"
+                                        required
+                                    >
+                                    <div v-if="errors.email" class="error-message">{{ errors.email }}</div>
+                                    <div v-else-if="formData.email && !errors.email" class="valid-feedback">Email looks good!</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        v-model="formData.phone"
+                                        @input="validateField('phone')"
+                                        @blur="validateField('phone')"
+                                        :class="{ 'is-invalid': errors.phone }"
+                                        required
+                                    >
+                                    <span class="error-message">{{ errors.phone }}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="visitDate">Preferred Visit Date</label>
+                                    <input 
+                                        type="date" 
+                                        id="visitDate" 
+                                        v-model="formData.visitDate"
+                                        @blur="validateField('visitDate')"
+                                        :class="{ 'is-invalid': errors.visitDate }"
+                                        required
+                                    >
+                                    <span class="error-message">{{ errors.visitDate }}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <div class="gender-options">
+                                        <label>
+                                            <input 
+                                                type="radio" 
+                                                name="gender" 
+                                                value="male" 
+                                                v-model="formData.gender"
+                                                @change="validateField('gender')"
+                                            > Male
+                                        </label>
+                                        <label>
+                                            <input 
+                                                type="radio" 
+                                                name="gender" 
+                                                value="female" 
+                                                v-model="formData.gender"
+                                                @change="validateField('gender')"
+                                            > Female
+                                        </label>
+                                    </div>
+                                    <span class="error-message">{{ errors.gender }}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="serviceType">Service Type</label>
+                                    <select 
+                                        id="serviceType" 
+                                        v-model="formData.serviceType"
+                                        @change="validateField('serviceType')"
+                                        :class="{ 'is-invalid': errors.serviceType }"
+                                        required
+                                    >
+                                        <option value="">Please select</option>
+                                        <option value="consultation">Robot Consultation</option>
+                                        <option value="demo">Product Demo</option>
+                                        <option value="customization">Custom Solution</option>
+                                        <option value="maintenance">Maintenance Service</option>
+                                        <option value="training">Technical Training</option>
+                                    </select>
+                                    <span class="error-message">{{ errors.serviceType }}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input 
+                                        type="text" 
+                                        id="subject" 
+                                        v-model="formData.subject"
+                                        @input="validateField('subject')"
+                                        @blur="validateField('subject')"
+                                        :class="{ 'is-invalid': errors.subject }"
+                                        required
+                                    >
+                                    <span class="error-message">{{ errors.subject }}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea 
+                                        id="message" 
+                                        v-model="formData.message"
+                                        @input="validateField('message')"
+                                        @blur="validateField('message')"
+                                        :class="{ 'is-invalid': errors.message }"
+                                        required
+                                    ></textarea>
+                                    <span class="error-message">{{ errors.message }}</span>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input 
+                                        type="checkbox" 
+                                        id="consent" 
+                                        v-model="formData.consent"
+                                        @change="validateField('consent')"
+                                        required
+                                    >
+                                    <label for="consent">I agree to the terms and conditions</label>
+                                    <div v-if="errors.consent" class="error-message">{{ errors.consent }}</div>
+                                </div>
+                                <button type="submit" class="submit-button" :disabled="!formIsValid">
+                                    <span v-if="formSubmitted && !formIsValid">Please fix errors</span>
+                                    <span v-else>Send Message</span>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Contact Information</h3>
+                            <p><strong>Address:</strong> 123 Robot Street, Automation City, AC 12345</p>
+                            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                            <p><strong>Email:</strong> info@lightyearrobotics.com</p>
+                            <p><strong>Business Hours:</strong> Mon - Fri, 9 AM - 6 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./assets/logo.png" alt="LightYear Logo">
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- New Video Intro Section -->
-        <section id="video-intro" class="video-intro-section">
-            <video autoplay muted loop playsinline id="introVideo" src="assets/Future.mp4"></video>
-            <div class="video-overlay-content">
-                <h1 class="display-4 fw-bold">Welcome to Light Year</h1>
-                <p class="lead mb-4 fw-bold">Discover the future of automation with us.</p>
-                <a href="#home" class="btn btn-outline-light btn-lg cta-button-video fw-bold">Let's start</a>
-            </div>
-        </section>
-
-        <!-- Hero Section with Carousel -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>The Future of Robotics is Here</h1>
-                <p>Experience next-generation automation with LightYear's innovative solutions.</p>
-                <!-- call to action button -->
-                <a href="#products" class="cta-button">Explore Our Robots</a>
-            </div>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <div class="slide active">
-                        <img src="assets/1.jpg" alt="Waiter Robot">
-                        <div class="caption">Advanced Robots for Service</div>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/2.jpg" alt="Chef Robot">
-                        <div class="caption">AI-Powered Robots for Chef</div>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/3.jpg" alt="Companion Robot">
-                        <div class="caption">Smart Home Robots for Daily Companion</div>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/4.jpg" alt="Caregiver Robot">
-                        <div class="caption">Precision Medical Robots for Healthcare</div>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/5.jpg" alt="Inspector Robot">
-                        <div class="caption"> Robots for Anomaly Detection and Safety Assurance</div>
-                    </div>
-                    <button class="carousel-button prev">&#10094;</button>
-                    <button class="carousel-button next">&#10095;</button>
-                    <div class="carousel-dots">
-                        <span class="dot active" data-index="0"></span>
-                        <span class="dot" data-index="1"></span>
-                        <span class="dot" data-index="2"></span>
-                        <span class="dot" data-index="3"></span>
-                        <span class="dot" data-index="4"></span>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Products Section -->
-        <section id="products" class="products">
-            <div class="container">
-                <h2>Our Robot Solutions</h2>
-                <div class="row g-4">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="product-card h-100">
-                            <img src="assets\1.jpg" alt="Waiter Robot" class="card-img-top">
-                            <div class="card-body">
-                                <h3>Waiter Robot</h3>
-                                <p>Where efficiency meets hospitality - I'm your automated dining companion, here to serve with precision, speed, and a touch of innovation.</p>
-                                <a href="#" class="product-link" data-bs-toggle="modal" data-bs-target="#waiterModal">Learn More</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="product-card h-100">
-                            <img src="assets\2.jpg" alt="Chef Robot" class="card-img-top">
-                            <div class="card-body">
-                                <h3>Chef Robot</h3>
-                                <p>From chopping to crafting culinary masterpieces – I blend technology with the art of cooking, delivering consistent flavor and creativity on every plate.</p>
-                                <a href="#" class="product-link" data-bs-toggle="modal" data-bs-target="#chefModal">Learn More</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="product-card h-100">
-                            <img src="assets\3.jpg" alt="Companion Robot" class="card-img-top">
-                            <div class="card-body">
-                                <h3>Companion Robot</h3>
-                                <p>More than just a machine - I'm here to listen, engage, and brighten your day with conversation, laughter, and unwavering companionship.</p>
-                                <a href="#" class="product-link" data-bs-toggle="modal" data-bs-target="#companionModal">Learn More</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="product-card h-100">
-                            <img src="assets\4.jpg" alt="Caregiver Robot" class="card-img-top">
-                            <div class="card-body">
-                                <h3>Caregiver Robot</h3>
-                                <p>Your safety and well-being are my priority. I provide reliable assistance, monitor health, and offer a reassuring presence for those in need.</p>
-                                <a href="#" class="product-link" data-bs-toggle="modal" data-bs-target="#caregiverModal">Learn More</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="product-card h-100">
-                            <img src="assets\5.jpg" alt="Inspector Robot" class="card-img-top">
-                            <div class="card-body">
-                                <h3>Inspector Robot</h3>
-                                <p>Detail-oriented and tireless - I'm designed to ensure safety, and maintain standards in every inspection.</p>
-                                <a href="#" class="product-link" data-bs-toggle="modal" data-bs-target="#inspectorModal">Learn More</a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Product Modals -->
-        <!-- Waiter Robot Modal -->
-        <div class="modal fade" id="waiterModal" tabindex="-1" aria-labelledby="waiterModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="waiterModalLabel">Waiter Robot</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="assets\1.jpg" alt="Waiter Robot" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-6">
-                                <h4>Advanced Service Robot</h4>
-                                <p class="lead">Revolutionizing the hospitality industry with precision and efficiency.</p>
-                                <ul class="feature-list">
-                                    <li><i class="fas fa-check"></i> Autonomous Navigation</li>
-                                    <li><i class="fas fa-check"></i> Multi-tray Carrying System</li>
-                                    <li><i class="fas fa-check"></i> Voice Recognition</li>
-                                    <li><i class="fas fa-check"></i> Collision Avoidance</li>
-                                    <li><i class="fas fa-check"></i> 8-hour Battery Life</li>
-                                </ul>
-                                <div class="specifications">
-                                    <h5>Technical Specifications</h5>
-                                    <table class="table">
-                                        <tr>
-                                            <td>Height</td>
-                                            <td>160cm</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Weight</td>
-                                            <td>45kg</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Load Capacity</td>
-                                            <td>15kg</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Operating Time</td>
-                                            <td>8-10 hours</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Request Demo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Chef Robot Modal -->
-        <div class="modal fade" id="chefModal" tabindex="-1" aria-labelledby="chefModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="chefModalLabel">Chef Robot</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="assets\2.jpg" alt="Chef Robot" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-6">
-                                <h4>AI-Powered Culinary Expert</h4>
-                                <p class="lead">Combining precision engineering with culinary artistry.</p>
-                                <ul class="feature-list">
-                                    <li><i class="fas fa-check"></i> Advanced Food Processing</li>
-                                    <li><i class="fas fa-check"></i> Temperature Control</li>
-                                    <li><i class="fas fa-check"></i> Recipe Database</li>
-                                    <li><i class="fas fa-check"></i> Multi-tool System</li>
-                                    <li><i class="fas fa-check"></i> Self-cleaning Function</li>
-                                </ul>
-                                <div class="specifications">
-                                    <h5>Technical Specifications</h5>
-                                    <table class="table">
-                                        <tr>
-                                            <td>Height</td>
-                                            <td>180cm</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Weight</td>
-                                            <td>75kg</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Working Area</td>
-                                            <td>2.5m²</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Power Consumption</td>
-                                            <td>2.5kW</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Request Demo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Companion Robot Modal -->
-        <div class="modal fade" id="companionModal" tabindex="-1" aria-labelledby="companionModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="companionModalLabel">Companion Robot</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="assets\3.jpg" alt="Companion Robot" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-6">
-                                <h4>Smart Home Companion</h4>
-                                <p class="lead">Your friendly AI companion for daily life.</p>
-                                <ul class="feature-list">
-                                    <li><i class="fas fa-check"></i> Natural Language Processing</li>
-                                    <li><i class="fas fa-check"></i> Emotion Recognition</li>
-                                    <li><i class="fas fa-check"></i> Smart Home Integration</li>
-                                    <li><i class="fas fa-check"></i> Entertainment Features</li>
-                                    <li><i class="fas fa-check"></i> Daily Schedule Management</li>
-                                </ul>
-                                <div class="specifications">
-                                    <h5>Technical Specifications</h5>
-                                    <table class="table">
-                                        <tr>
-                                            <td>Height</td>
-                                            <td>120cm</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Weight</td>
-                                            <td>25kg</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Battery Life</td>
-                                            <td>12 hours</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Voice Recognition</td>
-                                            <td>98% accuracy</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Request Demo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Caregiver Robot Modal -->
-        <div class="modal fade" id="caregiverModal" tabindex="-1" aria-labelledby="caregiverModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="caregiverModalLabel">Caregiver Robot</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="assets\4.jpg" alt="Caregiver Robot" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-6">
-                                <h4>Healthcare Assistant</h4>
-                                <p class="lead">Professional care and monitoring for healthcare facilities.</p>
-                                <ul class="feature-list">
-                                    <li><i class="fas fa-check"></i> Vital Signs Monitoring</li>
-                                    <li><i class="fas fa-check"></i> Medication Reminders</li>
-                                    <li><i class="fas fa-check"></i> Emergency Response</li>
-                                    <li><i class="fas fa-check"></i> Patient Mobility Support</li>
-                                    <li><i class="fas fa-check"></i> 24/7 Monitoring</li>
-                                </ul>
-                                <div class="specifications">
-                                    <h5>Technical Specifications</h5>
-                                    <table class="table">
-                                        <tr>
-                                            <td>Height</td>
-                                            <td>170cm</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Weight</td>
-                                            <td>65kg</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Load Capacity</td>
-                                            <td>100kg</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Operating Time</td>
-                                            <td>24 hours</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Request Demo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Inspector Robot Modal -->
-        <div class="modal fade" id="inspectorModal" tabindex="-1" aria-labelledby="inspectorModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="inspectorModalLabel">Inspector Robot</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="assets\5.jpg" alt="Inspector Robot" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-6">
-                                <h4>Industrial Inspection Expert</h4>
-                                <p class="lead">Advanced inspection and quality control for industrial applications.</p>
-                                <ul class="feature-list">
-                                    <li><i class="fas fa-check"></i> High-Resolution Imaging</li>
-                                    <li><i class="fas fa-check"></i> Thermal Scanning</li>
-                                    <li><i class="fas fa-check"></i> Defect Detection AI</li>
-                                    <li><i class="fas fa-check"></i> Autonomous Navigation</li>
-                                    <li><i class="fas fa-check"></i> Real-time Reporting</li>
-                                </ul>
-                                <div class="specifications">
-                                    <h5>Technical Specifications</h5>
-                                    <table class="table">
-                                        <tr>
-                                            <td>Height</td>
-                                            <td>150cm</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Weight</td>
-                                            <td>40kg</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Camera Resolution</td>
-                                            <td>4K Ultra HD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Operating Range</td>
-                                            <td>500m radius</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Request Demo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Features Section -->
-        <section id="features" class="features">
-            <h2>Key Features</h2>
-            <div class="features-container">
-                <div class="feature">
-                    <img src="./assets/AI.png" alt="AI Icon">
-                    <h3>Advanced AI</h3>
-                    <p>Our robots use state-of-the-art artificial intelligence to adapt to new tasks.</p>
-                </div>
-                <div class="feature">
-                    <img src="./assets/battery.png" alt="Battery Icon">
-                    <h3>Long Battery Life</h3>
-                    <p>Extended operation time with quick-charging capabilities.</p>
-                </div>
-                <div class="feature">
-                    <img src="./assets/durability.png" alt="Durability Icon">
-                    <h3>Durability</h3>
-                    <p>Built with premium materials to withstand harsh environments.</p>
-                </div>
-                <div class="feature">
-                    <img src="./assets/support.png" alt="Support Icon">
-                    <h3>24/7 Support</h3>
-                    <p>Our team is always available to help with any issues or questions.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Video Demo Section -->
-        <section id="demo" class="demo">
-            <h2>See Our Robots in Action</h2>
-            <div class="video-container">
-                <video controls poster="./assets/robot.mp4" autoplay muted loop>
-                    <source src="./assets/robot.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="about">
-            <h2>About LightYear</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="./assets/team.png" alt="LightYear Team">
-                </div>
-                <div class="about-text">
-                    <p>LightYear is a leading innovator in robotics technology. Founded in 2010, we've been pushing the boundaries of what robots can do for over a decade.</p>
-                    <p>Our team of engineers, designers, and AI specialists work together to create robots that are not only functional but also intuitive and easy to use.</p>
-                    <p>We believe in a future where robots and humans work together to create a better world.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Accordion FAQ Section -->
-        <section id="faq-accordion" class="faq-section">
-            <div class="container">
-                <h2 class="mb-4">Frequently Asked Questions</h2>
-                <div class="accordion custom-faq-accordion" id="faqAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq1-heading">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
-                                What kind of robots do you offer?
-                            </button>
-                        </h2>
-                        <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                We offer a diverse range of robots including service robots for hospitality, AI-powered chef robots, smart home companion robots, precision medical robots for healthcare, and inspector robots for safety and anomaly detection.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq2-heading">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                                Are your robots customizable?
-                            </button>
-                        </h2>
-                        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Yes, many of our robotic solutions can be customized to meet specific client needs and operational requirements. Please contact our sales team to discuss your customization options.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq3-heading">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                                What is the typical battery life of your robots?
-                            </button>
-                        </h2>
-                        <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Battery life varies depending on the robot model and usage intensity. Generally, our robots are designed for extended operational periods, with many models featuring autonomous charging capabilities.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq4-heading">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                                Do you provide training and support?
-                            </button>
-                        </h2>
-                        <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Absolutely. We provide comprehensive training for operating our robots and offer ongoing technical support to ensure seamless integration and performance.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq5-heading">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                                How can I get a quote for a robot?
-                            </button>
-                        </h2>
-                        <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5-heading" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                You can request a quote by filling out the contact form on our website, or by directly emailing our sales department. We'll get back to you promptly with the relevant information.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faq6-heading">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
-                                What safety features are built into your robots?
-                            </button>
-                        </h2>
-                        <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-heading" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Our robots are equipped with advanced safety features, including multiple sensors for obstacle avoidance, emergency stop mechanisms, and compliance with industry safety standards to ensure safe operation in various environments.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Get in Touch</h2>
-                <div class="contact-container">
-                    <div class="contact-form">
-                        <h3>Send Us a Message</h3>
-                        <form id="contactForm" @submit.prevent="submitForm">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input 
-                                    type="text" 
-                                    id="name" 
-                                    v-model="formData.name"
-                                    @input="validateField('name')"
-                                    @blur="validateField('name')"
-                                    required
-                                >
-                                <span class="error-message">{{ errors.name }}</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    v-model="formData.email"
-                                    @input="validateField('email')"
-                                    @blur="validateField('email')"
-                                    required
-                                >
-                                <span class="error-message">{{ errors.email }}</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input 
-                                    type="tel" 
-                                    id="phone" 
-                                    v-model="formData.phone"
-                                    @input="validateField('phone')"
-                                    @blur="validateField('phone')"
-                                    required
-                                >
-                                <span class="error-message">{{ errors.phone }}</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="visitDate">Preferred Visit Date</label>
-                                <input 
-                                    type="date" 
-                                    id="visitDate" 
-                                    v-model="formData.visitDate"
-                                    @blur="validateField('visitDate')"
-                                    required
-                                >
-                                <span class="error-message">{{ errors.visitDate }}</span>
-                            </div>
-                            <div class="form-group">
-                                <label>Gender</label>
-                                <div class="gender-options">
-                                    <label>
-                                        <input 
-                                            type="radio" 
-                                            name="gender" 
-                                            value="male" 
-                                            v-model="formData.gender"
-                                            @change="validateField('gender')"
-                                        > Male
-                                    </label>
-                                    <label>
-                                        <input 
-                                            type="radio" 
-                                            name="gender" 
-                                            value="female" 
-                                            v-model="formData.gender"
-                                            @change="validateField('gender')"
-                                        > Female
-                                    </label>
-                                </div>
-                                <span class="error-message">{{ errors.gender }}</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="serviceType">Service Type</label>
-                                <select 
-                                    id="serviceType" 
-                                    v-model="formData.serviceType"
-                                    @change="validateField('serviceType')"
-                                    required
-                                >
-                                    <option value="">Please select</option>
-                                    <option value="consultation">Robot Consultation</option>
-                                    <option value="demo">Product Demo</option>
-                                    <option value="customization">Custom Solution</option>
-                                    <option value="maintenance">Maintenance Service</option>
-                                    <option value="training">Technical Training</option>
-                                </select>
-                                <span class="error-message">{{ errors.serviceType }}</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input 
-                                    type="text" 
-                                    id="subject" 
-                                    v-model="formData.subject"
-                                    @input="validateField('subject')"
-                                    @blur="validateField('subject')"
-                                    required
-                                >
-                                <span class="error-message">{{ errors.subject }}</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea 
-                                    id="message" 
-                                    v-model="formData.message"
-                                    @input="validateField('message')"
-                                    @blur="validateField('message')"
-                                    required
-                                ></textarea>
-                                <span class="error-message">{{ errors.message }}</span>
-                            </div>
-                            <div class="form-group checkbox-group">
-                                <input 
-                                    type="checkbox" 
-                                    id="consent" 
-                                    v-model="formData.consent"
-                                    @change="validateField('consent')"
-                                    required
-                                >
-                                <label for="consent">I agree to the terms and conditions</label>
-                                <span class="error-message">{{ errors.consent }}</span>
-                            </div>
-                            <button type="submit" class="submit-button">Send Message</button>
-                        </form>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <p><strong>Address:</strong> 123 Robot Street, Automation City, AC 12345</p>
-                        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                        <p><strong>Email:</strong> info@lightyearrobotics.com</p>
-                        <p><strong>Business Hours:</strong> Mon - Fri, 9 AM - 6 PM</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        
-
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="./assets/logo.png" alt="LightYear Logo">
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="footer-newsletter">
-                <h4>Stay Updated</h4>
-                <p>Subscribe to our newsletter for the latest robotics news and updates.</p>
-                <div id="newsletterForm">
-                    <form @submit.prevent="submitNewsletter">
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest robotics news and updates.</p>
+                    <form @submit.prevent="submitNewsletter" novalidate :class="{ 'was-validated': newsletterSubmitted }">
                         <div class="form-group">
                             <input 
                                 type="email" 
@@ -759,23 +734,24 @@
                                 placeholder="Enter your email" 
                                 required
                                 @input="validateNewsletterEmail"
+                                :class="{ 'is-invalid': newsletterError }"
                             >
                             <span class="error-message">{{ newsletterError }}</span>
                         </div>
-                        <button type="submit" class="subscribe-btn">
+                        <button type="submit" class="subscribe-btn" :disabled="!newsletterIsValid">
                             Subscribe Now
                         </button>
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 LightYear. All rights reserved.</p>
-        </div>
-    </footer>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LightYear. All rights reserved.</p>
+            </div>
+        </footer>
 
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+    </div>
 
 </body>
 </html>
